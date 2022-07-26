@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ServiceOutlet</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="~/css/icon-font.min.css">
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="~/css/plugins.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ServiceOutlet.styles.css" asp-append-version="true" />
+
+    <!--TEMP : DELETE AFTER LAUNCH - COMING SOON STYLE-->
+    <link rel="stylesheet" href="~/css/main-comingsoon.css">
+</head>
+<body>
+    
+    <!-- Header Section Start -->
+    <div class="header-section section">
+
+        <!-- Header Top Start -->
+        <div class="header-top header-top-one header-top-border pt-10 pb-10">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+
+                    <div class="col mt-10 mb-10">
+                        <!-- Header Links Start -->
+                        <div class="header-links">
+                            <a asp-area="" asp-page="/ServiceProvider"><img src="~/images/icons/service-provider.png" width="24" height="24" alt="Service Provider Icon"> <span>Provide a Service</span></a>
+                            <a asp-area="" asp-page="/ConctactUs"><img src="~/images/icons/contactus.png" width="24" height="24" alt="Conctact Us Icon"> <span>Contact Us</span></a>
+                        </div><!-- Header Links End -->
+                    </div>
+
+                    <div class="col order-12 order-xs-12 order-lg-2 mt-10 mb-10">
+                        <!-- Header Advance Search Start -->
+                        <div class="header-advance-search">
+
+                            <form action="#">
+                                <div class="input"><input type="text" placeholder="Search for a specific service"></div>
+                                <div class="select">
+                                    <select class="nice-select">
+                                        <option>All Categories</option>
+                                        <option>Design</option>
+                                        <option>Writing</option>
+                                        <option>Video</option>
+                                        <option>Marketing</option>
+                                        <option>SEO</option>
+                                        <option>Advertising</option>
+                                    </select>
+                                </div>
+                                <div class="submit"><button><i class="icofont icofont-search-alt-1"></i></button></div>
+                            </form>
+
+                        </div><!-- Header Advance Search End -->
+                    </div>
+
+                    <div class="col order-2 order-xs-2 order-lg-12 mt-10 mb-10">
+                        <partial name="_LoginPartial" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Header Top End -->
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                 @*       <div class="header-logo">
+                            <a asp-area="" asp-page="/Index">
+                                <img src="~/images/icons/logo.png" width="150" height="150" alt="SO - Service Outlet">
+                            </a>
+                        </div>*@
+                        <!-- Logo End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Bottom End -->
+
+    </div>
+    <!-- Header Section End -->
+
+            @RenderBody()
+
+@*    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - ServiceOutlet - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>*@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+       <!-- Plugins JS -->
+    <script src="~/js/plugins.js"></script>
+        <!-- Main JS -->
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
