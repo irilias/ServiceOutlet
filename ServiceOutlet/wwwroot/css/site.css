@@ -61,6 +61,37 @@ h6 {
     font-size: 12px;
     line-height: 14px;
 }
+.form-group {
+    position: relative;
+    padding: .25rem .25rem;
+    margin-left: .25rem;
+}
+
+.form-group input {
+    border: 1px solid #B1B6C5;
+    border-radius: 40px;
+    -webkit-transition: 0.3s all linear;
+    transition: 0.3s all linear;
+}
+
+.form-group input:focus {
+    border-color: #ff3251;
+}
+
+.form-group button {
+    border: 1px solid #f5d730;
+    border-radius: 40px;
+    background-color: #f5d730;
+    color: #000000;
+    font-weight: 500;
+    position: absolute;
+}
+
+.form-group button:hover {
+    background-color: #202020;
+    color: #f5d730;
+}
+
 
 p:last-child {
     margin-bottom: 0;

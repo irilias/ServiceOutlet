@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="~/css/plugins.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ServiceOutlet.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
 
-    <!--TEMP : DELETE AFTER LAUNCH - COMING SOON STYLE-->
-    <link rel="stylesheet" href="~/css/main-comingsoon.css">
 </head>
 <body>
     
